@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="vocalizerlib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/VocalizerSample/libs/vocalizerlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

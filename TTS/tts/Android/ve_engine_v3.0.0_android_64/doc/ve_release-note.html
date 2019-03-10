@@ -1,0 +1,1043 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="AsciiDoc 8.6.1">
+<title>Vocalizer Expressive SDK</title>
+<style type="text/css">
+/* Debug borders */
+p, li, dt, dd, div, pre, h1, h2, h3, h4, h5, h6 {
+/*
+  border: 1px solid red;
+*/
+}
+
+body {
+  margin: 1em 5% 1em 5%;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+a:visited {
+  color: fuchsia;
+}
+
+em {
+  font-style: italic;
+  color: navy;
+}
+
+strong {
+  font-weight: bold;
+  color: #083194;
+}
+
+tt {
+  color: navy;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  font-family: sans-serif;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+
+div.sectionbody {
+  font-family: serif;
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+span#author {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+span#email {
+}
+span#revnumber, span#revdate, span#revremark {
+  font-family: sans-serif;
+}
+
+div#footer {
+  font-family: sans-serif;
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+div#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+div#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+div#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+td div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content div.title:first-child {
+  margin-top: 0.0em;
+}
+div.content + div.title {
+  margin-top: 0.0em;
+}
+
+div.sidebarblock > div.content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+
+div.listingblock > div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock, div.verseblock {
+  padding-left: 1.0em;
+  margin-left: 1.0em;
+  margin-right: 10%;
+  border-left: 5px solid #dddddd;
+  color: #777777;
+}
+
+div.quoteblock > div.attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+div.verseblock > pre.content {
+  font-family: inherit;
+}
+div.verseblock > div.attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+/* DEPRECATED: Pre version 8.2.7 verse style literal block. */
+div.verseblock + div.attribution {
+  text-align: left;
+}
+
+div.admonitionblock .icon {
+  vertical-align: top;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #527bbd;
+  padding-right: 0.5em;
+}
+div.admonitionblock td.content {
+  padding-left: 0.5em;
+  border-left: 3px solid #dddddd;
+}
+
+div.exampleblock > div.content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock div.content { padding-left: 0; }
+span.image img { border-style: none; }
+a.image:visited { color: white; }
+
+dl {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+dt {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+  font-style: normal;
+  color: navy;
+}
+dd > *:first-child {
+  margin-top: 0.1em;
+}
+
+ul, ol {
+    list-style-position: outside;
+}
+ol.arabic {
+  list-style-type: decimal;
+}
+ol.loweralpha {
+  list-style-type: lower-alpha;
+}
+ol.upperalpha {
+  list-style-type: upper-alpha;
+}
+ol.lowerroman {
+  list-style-type: lower-roman;
+}
+ol.upperroman {
+  list-style-type: upper-roman;
+}
+
+div.compact ul, div.compact ol,
+div.compact p, div.compact p,
+div.compact div, div.compact div {
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+div.tableblock > table {
+  border: 3px solid #527bbd;
+}
+thead, p.table.header {
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #527bbd;
+}
+tfoot {
+  font-weight: bold;
+}
+td > div.verse {
+  white-space: pre;
+}
+p.table {
+  margin-top: 0;
+}
+/* Because the table frame attribute is overriden by CSS in most browsers. */
+div.tableblock > table[frame="void"] {
+  border-style: none;
+}
+div.tableblock > table[frame="hsides"] {
+  border-left-style: none;
+  border-right-style: none;
+}
+div.tableblock > table[frame="vsides"] {
+  border-top-style: none;
+  border-bottom-style: none;
+}
+
+
+div.hdlist {
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
+}
+div.hdlist tr {
+  padding-bottom: 15px;
+}
+dt.hdlist1.strong, td.hdlist1.strong {
+  font-weight: bold;
+}
+td.hdlist1 {
+  vertical-align: top;
+  font-style: normal;
+  padding-right: 0.8em;
+  color: navy;
+}
+td.hdlist2 {
+  vertical-align: top;
+}
+div.hdlist.compact tr {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.comment {
+  background: yellow;
+}
+
+.footnote, .footnoteref {
+  font-size: 0.8em;
+}
+
+span.footnote, span.footnoteref {
+  vertical-align: super;
+}
+
+#footnotes {
+  margin: 20px 0 20px 0;
+  padding: 7px 0 0 0;
+}
+
+#footnotes div.footnote {
+  margin: 0 0 5px 0;
+}
+
+#footnotes hr {
+  border: none;
+  border-top: 1px solid silver;
+  height: 1px;
+  text-align: left;
+  margin-left: 0;
+  width: 20%;
+  min-width: 100px;
+}
+
+div.colist td {
+  padding-right: 0.5em;
+  padding-bottom: 0.3em;
+  vertical-align: top;
+}
+div.colist td img {
+  margin-top: 0.3em;
+}
+
+@media print {
+  div#footer-badges { display: none; }
+}
+
+div#toc {
+  margin-bottom: 2.5em;
+}
+
+div#toctitle {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1.0em;
+  margin-bottom: 0.1em;
+}
+
+div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.toclevel2 {
+  margin-left: 2em;
+  font-size: 0.9em;
+}
+div.toclevel3 {
+  margin-left: 4em;
+  font-size: 0.9em;
+}
+div.toclevel4 {
+  margin-left: 6em;
+  font-size: 0.9em;
+}
+
+/* Workarounds for IE6's broken and incomplete CSS2. */
+
+div.sidebar-content {
+  background: #ffffee;
+  border: 1px solid silver;
+  padding: 0.5em;
+}
+div.sidebar-title, div.image-title {
+  color: #527bbd;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+}
+
+div.listingblock div.content {
+  border: 1px solid silver;
+  background: #f4f4f4;
+  padding: 0.5em;
+}
+
+div.quoteblock-attribution {
+  padding-top: 0.5em;
+  text-align: right;
+}
+
+pre.verseblock-content {
+  font-family: inherit;
+}
+div.verseblock-attribution {
+  padding-top: 0.75em;
+  text-align: left;
+}
+
+div.exampleblock-content {
+  border-left: 3px solid #dddddd;
+  padding-left: 0.5em;
+}
+
+div.imageblock.latex div.image-title { margin-top: 0.5em; }
+
+/* IE6 sets dynamically generated links as visited. */
+div#toc a:visited { color: blue; }
+</style>
+<script type="text/javascript">
+/*<![CDATA[*/
+window.onload = function(){asciidoc.footnotes(); asciidoc.toc(2);}
+var asciidoc = {  // Namespace.
+
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([2-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  var cont = document.getElementById("content");
+  var noteholder = document.getElementById("footnotes");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      // Use [\s\S] in place of . so multi-line matches work.
+      // Because JavaScript has no s (dotall) regex flag.
+      note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      spans[i].innerHTML =
+        "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+        "' title='View footnote' class='footnote'>" + n + "</a>]";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+}
+
+}
+/*]]>*/
+</script>
+</head>
+<body class="article" style="max-width:55em">
+<div id="header">
+<h1>Vocalizer Expressive SDK</h1>
+<div id="toc">
+  <div id="toctitle">Table of Contents</div>
+  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+   <div class="toclevel1"><a href="#_deliverables">1. Deliverables</a></div>
+   <div class="toclevel2"><a href="#_vocalizer_expressive_engine">1.1. Vocalizer Expressive Engine</a></div>
+   <div class="toclevel2"><a href="#_voice_packages">1.2. Voice packages</a></div>
+   <div class="toclevel2"><a href="#_package_set">1.3. Package set</a></div>
+   <div class="toclevel1"><a href="#_system_requirements">2. System requirements</a></div>
+   <div class="toclevel1"><a href="#_how_to_install">3. How to install</a></div>
+   <div class="toclevel1"><a href="#_sample_programs">4. Sample programs</a></div>
+   <div class="toclevel2"><a href="#_introduction">4.1. Introduction</a></div>
+   <div class="toclevel2"><a href="#_sample_program_1_on_android">4.2. Sample program on Android</a></div>
+   <div class="toclevel2"><a href="#_sample_program_2_on_android">4.3. Voice installer sample on Android</a></div>
+   <div class="toclevel2"><a href="#_reusing_the_vocalizerengine_class_in_your_own_project">4.4. Reusing the VocalizerEngine class in your own project</a></div>
+   <div class="toclevel1"><a href="#_the_vocalizerengine_class_reference">5. The VocalizerEngine class reference</a></div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph"><div class="title">Vocalizer Expressive SDK v3.0.0 for Android</div><p>Release Note December 2016</p></div>
+<div class="paragraph"><p>Copyright © 2016 Nuance Communications, Inc. All rights reserved. All
+product names mentioned herein are trademarks or registered trademarks
+of their respective owners.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_deliverables">1. Deliverables</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The Nuance Vocalizer Expressive SDK for Android contains the run-time components for Android (arm64-v8a).</p></div>
+<div class="paragraph"><p>The release set consists of the following packages:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Vocalizer Expressive Engine
+</p>
+<div class="paragraph"><p>This package contains the code components, which implement the API and
+are shared over all languages and voices. These code components are implemented as a native library
+wrapped in a Java framework.</p></div>
+</li>
+<li>
+<p>
+Voice packages
+</p>
+<div class="paragraph"><p>Languages and voices are added on Vocalizer Expressive as mere
+data components. The SDK has one data package per voice operating point. A sample voice APK project is provided
+as an example of how to create an installable voice package for the Vocalizer Android engine.</p></div>
+<div class="paragraph"><p>Voice packages that belong to the same language always have the language
+data components. For multi-lingual voices the package also contains
+the foreign language data. So every voice installs the necessary
+voice and language data to run properly and there is no dependency
+between the different voice packages.</p></div>
+</li>
+
+<li>
+<p>
+Expansion Pack Files (Optional)
+</p>
+<div class="paragraph"><p>Google Play currently requires that your APK files be no more than 50MB. Some of the voice operating points offered by Vocalizer Expressive easily exceed this limit. Therefore, the Vocalizer Expressive SDK for Android now also supports data to be packaged as APK expansion files. Google Play allows you to attach two expansion files that supplement your APK, and each file can be up to 2 GB.</p></div>
+<div class="paragraph"><p>Each time you upload an APK using the Google Play Developer Console, you have the option to add one or two expansion files to the APK. They can be any format but Vocalizer Expressive uses OBB files, a compressed file format to conserve bandwidth during the download. Conceptually, each expansion file plays a different role:</p>
+<div class="ulist"><ul>
+<li><p>The main expansion file is the primary expansion file for additional resources required by your application.</p></li>
+<li><p>The patch expansion file is optional and intended for small updates to the main expansion file.</p></li>
+<ul></div>
+</li>
+</ul></div>
+<div class="paragraph"><p>Each package has a version number of the form <tt>M.m.r</tt>:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<tt>M</tt> is the major release number of the package; it increments for
+  significant changes and a new generation of the engine, which may
+  break compatibility with the previous generation.
+</p>
+</li>
+<li>
+<p>
+<tt>m</tt> is the minor release number of the package; it indicates an update
+  of the engine or the data components. Engine and data components that
+  share the same <tt>M.m</tt> release number, are guaranteed to be compatible.
+</p>
+</li>
+<li>
+<p>
+<tt>r</tt> is the revision number of the package; it changes to mark minor
+  changes and fixes. All <tt>M.m.r</tt> packages with the same <tt>M.m</tt> are
+  compatible.
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Customers are strongly recommended to pick up the latest <tt>M.m.r</tt> version
+for every package in order to have the latest fixes and improvements.</p></div>
+<div class="paragraph"><p>This package release note always corresponds to the latest status and
+lists the latest version of all packages.</p></div>
+<div class="sect2">
+<h3 id="_vocalizer_expressive_engine">1.1. Vocalizer Expressive Engine</h3><div style="clear:left"></div>
+<div class="sect3">
+<h4 id="_package_name">1.1.1. Package name</h4>
+<div class="paragraph"><p><tt>ve_engine_&lt;ver&gt;_android_64.zip</tt></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<tt>&lt;ver&gt;</tt> is the package version number, e.g. <tt>v3.0.0</tt>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Example: <tt>ve_engine_v3.0.0_android_64.zip</tt></p></div>
+</div>
+<div class="sect3">
+<h4 id="_run_time_components">1.1.2. Run-time components</h4>
+<div class="ulist"><ul>
+<li>
+<p>
+The language-independent run-time component for the Vocalizer engine v3.0.0,
+which implements the Vocalizer Expressive API:
+</p>
+<div class="ulist"><ul>
+<li>
+<p>
+Android ARM native library: <tt>libNuanceVocalizer.so</tt>
+</p>
+</li>
+<li>
+<p>
+Android Java framework: <tt>vocalizerlib.jar</tt>
+</p>
+</li>
+</ul></div>
+</li>
+<li>
+<p>
+The language and voice data components for the American English voice Ava Embedded Compact can be found in the
+<tt>/VocalizerSample/assets/vocalizer</tt> directory.
+</p>
+</li>
+<li>
+<p>
+The language and voice independent data components can be found in the <tt>/common/speech/components</tt> folder. These consist of the:
+<div class="ulist"><ul>
+<li>clm.dat - cross-language mapping data</li>
+<li>lid.dat - language identification data</li>
+<li>synth_med_fxd_bet3f22.dat - generic data for Embedded Compact voice operating points</li>
+<li>sysdct.dat - NT-SAMPA to L&H+ mapping data</li>
+</ul></div>
+</p>
+<p>
+Please note that Voice package need to be created in a specific way to work with the Android Vocalizer Expressive SDK. Please refer to
+<a href="#_sample_program_2_on_android">4.3. Voice installer sample on Android</a> for more details on how to create such packages.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect3">
+<h4 id="_sdk_development_files">1.1.3. SDK development files</h4>
+<div class="ulist"><ul>
+<li>
+<p>
+JAR file and native library in the <tt>/bin</tt> directory.
+</p>
+</li>
+<li>
+<p>
+The Vocalizer Java documentation: <tt>index.html</tt> in the <tt>/doc</tt> directory.
+</p>
+</li>
+<li>
+<p>
+The Users Guide and Programmers Reference: <tt>ve_ugpr.pdf</tt> in
+  the <tt>/doc</tt> directory.
+</p>
+</li>
+<li>
+<p>
+Sample program Eclipse project: <tt>/VocalizerSample</tt> directory.
+</p>
+</li>
+<li>
+<p>
+Sample Voice Pack Eclipse project: <tt>/Vocalizer Language Pack</tt> directory.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_voice_packages">1.2. Voice packages</h3><div style="clear:left"></div>
+<div class="sect3">
+<h4 id="_package_name_2">1.3.0. Package name</h4>
+<div class="paragraph"><p><tt>&lt;languageTLA&gt;_&lt;voice&gt;_&lt;voiceoperatingpoint&gt;_&lt;ver&gt;.zip</tt></p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+<tt>&lt;languageTLA&gt;</tt> is the language name three letter abbreviation, e.g. <tt>enu</tt>
+</p>
+</li>
+<li>
+<p>
+<tt>&lt;voice&gt;</tt> is the voice name, e.g. <tt>Samantha</tt>
+</p>
+</li>
+<li>
+<p>
+<tt>&lt;modelkind&gt;</tt> is the name of the voice operating point, e.g. <tt>premium-high</tt>
+</p>
+</li>
+<li>
+<p>
+<tt>&lt;ver&gt;</tt> is the package version number, e.g. <tt>1.0.0</tt>
+</p>
+</li>
+</ul></div>
+<div class="paragraph"><p>Example: <tt>enu_samantha_premium-high_1.0.0.zip</tt></p></div>
+<div class="paragraph">
+   <p>Please note that in order for these voice packages to be installed and detected by the Android Vocalizer Engine
+      the voice data files need to be renamed and stored in a particular manner. Please refer to
+      <a href="#_sample_program_2_on_android">4.3. Voice installer sample on Android</a> for more details.
+   </p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_run_time_components_2">1.2.2. Run-time components</h4>
+<div class="ulist"><ul>
+<li>
+<p>
+The language data components.
+</p>
+</li>
+<li>
+<p>
+The voice data components for the Embedded Compact, Embedded Pro, Embedded High, and Premium High voice operating points.
+</p>
+</li>
+</ul></div>
+</div>
+<div class="sect3">
+<h4 id="_sdk_development_files_2">1.2.3. SDK development files</h4>
+<div class="ulist"><ul>
+<li>
+<p>
+The language documentation is a set of .htm documents organized by
+language, voice and operating point. It is available in the tree under
+<tt>/doc/languages</tt> in the installation directory..
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_system_requirements">2. System Requirements</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The System Requirements for Vocalizer Expressive SDK include:
+</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Android Target Version - Android Device with 7.0(Nougat) or higher
+</p>
+</li>
+<li>
+<p>
+CPU/ABI - ARMv8-A
+</p>
+</li>
+<li>
+<p>
+API Level - 24 or higher
+</p>
+</li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_how_to_install">3. How to install</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>The Vocalizer Expressive SDK packages can be downloaded from the Nuance support
+website, <a href="https://network.nuance.com/">https://network.nuance.com</a>.</p></div>
+<div class="paragraph"><p>First install an engine package, then a voice package of your choice.</p></div>
+<div class="paragraph"><p>To install an engine package simply unzip the engine package and copy the resulting
+folder to your preferred place on your hard disk.</p></div>
+<div class="paragraph"><p>A voice package consists of one ZIP file and the ZIP file expands to the following
+directory structure:</p></div>
+<div class="paragraph"><pre><tt>enu_ava_embedded-compact_1.0.0
++--doc
++--languages
++--test_sapi
+
+</tt></pre></div>
+<div class="paragraph"><p><strong>Remark:</strong> A voice package can be used on our Vocalizer Expressive SDK for iOS/OSX, for Windows and for Android. As
+such, a voice package can contain files needed for the SDK for the other target platforms, e.g. SAPI support files for Windows.</p></div>
+<div class="paragraph"><p>The languages subdirectory contains the data and header files which make up a voice.
+The directory structure of the languages directory is as follows (the directory structure
+below is given for an American English voice - enu is a three letter abbreviation
+used to represent American English):</p></div>
+<div class="literalblock">
+<div class="content">
+<pre><tt>languages
++--enu
+   +--speech
+       +--components
+       +--ve</tt></pre>
+</div></div>
+<div class="paragraph"><p>The <tt>components</tt> subdirectory contains the data files for a voice while the <tt>ve</tt> subdirectory
+contains <tt>.hdr</tt> files which describe the configuration of a voice operating point. For every voice operating point
+you will find the corresponding <tt>.hdr</tt> file in the <tt>ve</tt> directory.</p></div>
+<div class="paragraph"><p>To add a voice package to your application you need to copy the contents of the <tt>components</tt>
+and <tt>ve</tt> subdirectories to the <tt>assets/vocalizer</tt> subdirectory of your Language Pack project and rename them
+as described in <a href="#_sample_program_2_on_android">4.3. Voice installer sample on Android</a>.</p>
+<p>Its not advised to unzip the voice package in place of an existing languages directory
+since the unzip utility will first remove the old languages subdirectory and replace it with the
+unzipped one. In that case you will lose already installed languages.</p></div>
+<div class="paragraph"><p>If you no longer wish to use a voice and/or the engine, you can easily remove it by simply
+deleting the files in the ZIP file.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sample_programs">4. Sample programs</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction">4.1. Introduction</h3><div style="clear:left"></div>
+<div class="paragraph"><p>The SDK contains 2 sample projects for Android:</p></div>
+<div class="paragraph"><p>VocalizerSample is an Eclipse project implementing a simple Android app using the Vocalizer Expressive TTS engine to get you started.</p></div>
+<div class="paragraph"><p>Vocalizer Language Pack is an example implementation of a Vocalizer voice installer app meant as a guideline on how to create voice package installers.</p></div>
+<div class="sect2">
+<h3 id="_sample_program_1_on_os_x">4.2. VocalizerSample</h3><div style="clear:left"></div>
+<div class="paragraph"><p>The Eclipse project can be found in the <tt>/VocalizerSample</tt> directory.</p></div>
+<div class="paragraph"><p>The sample Android app showcases how to use the Vocalizer Expressive Java classes in a simple application.</p></div>
+<div class="paragraph"><p>In this example the voice files are embedded directly in the apps assets folder so no additional voice package is necessary.
+   Simply build the app and run it on your device (or emulator).</p></div>
+<div class="paragraph"><p>The sample app allows you to enter text to be spoken, and will also display mouth movements and an oscilloscope view, exercising all the
+   different output data interfaces available.</p></div>
+</div>
+<div class="sect2">
+<h3 id="_sample_program_2_on_android">4.3. Voice installer sample on Android</h3><div style="clear:left"></div>
+<div class="paragraph"><p>This project is an example on how to implement a voice package installer app and can be found in the <tt>/Vocalizer Language Pack</tt> folder.</p></div>
+<div class="paragraph"><p>The typical way for an Android application that requires large binary data files is to create an APK which
+   extracts and installs the binaries on the SD card. There are several drawbacks with this approach:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Binary files are readily available to the user.
+</p>
+</li>
+<li>
+<p>
+Binary files are duplicated on the system - in the .apk file as well as on the SD card - wasting space.
+</p>
+</li>
+</ul>
+</div>
+<div class="paragraph"><p>To avoid this we instead embed the voice resource as raw assets in the APK and access them directly from there at runtime.
+   For this to work some special modifications are necessary:</p></div>
+<div class="ulist">
+<ul>
+<li>
+<p>
+   We need to create a subfolder <tt>vocalizer</tt> in the voice projects assets folder and copy all the voice data files (.dat and .hdr files) there, in other words:
+   <pre><tt>MyVoiceApp
++--assets
+   +--vocalizer
+      +--enu_ava_embedded-compact_1-0-0.dat
+      +--ve_pipeline_enu_ava_22_embedded-compact_1-0-0.hdr
+   </tt></pre>
+</p>
+</li>
+<li>
+<p>
+   We need to rename the file endings to prevent the Android APK builder from compressing the files. To do this we rename .dat files to .xmf and the .hdr files to .jet.
+   The reason for this is that these file endings are recognized by the APK builder as files that must be left as-is and not compressed. After this we then have a folder
+   structure which looks as follows (assuming we use the US English Ava Compact voice):
+   <pre><tt>MyVoiceApp
++--assets
+   +--vocalizer
+      +--enu_ava_embedded-compact_1-0-0.xmf
+      +--ve_pipeline_enu_ava_22_embedded-compact_1-0-0.jet
+   </tt></pre>
+</p>
+</li>
+<li>
+<p>
+   Additionaly, for these voice-only APK's we also need to declare a special intent filter in the <tt>AndroidManifest.xml</tt> file in order for the Vocalizer engine application
+   to be able to know which packages to search for voice data files. The intent filter is <tt>com.nuance.vocalizer.VOCALIZER_DATA</tt> and needs to be declared as follows:
+   <pre><tt>
+      &lt;intent-filter&gt;
+         &lt;action android:name="com.nuance.vocalizer.VOCALIZER_DATA" /&gt;
+      &lt;/intent-filter&gt;
+   </tt></pre>
+   A complete example of this can be found in <tt>Vocalizer Language Pack/AndroidManifest.xml</tt>.
+</p>
+</li>
+</ul>
+</div>
+<div class="paragraph"><p>Once this is done, you can generate an APK file from your voice project, install it on the device,
+   and the Vocalizer Engine app will be able to locate the voice files and use them.</p></div>
+<div class="paragraph"><p>Due to the limited size of APK files on Google Play mentioned before, you may have to use an expansion file
+for Voice APKs containing large voices like Premium High. The expansion file is attached to a Voice APK and will be accessed only by the Voice APK itself.
+To create such an expansion file for a Voice APK please proceed as follows:</p></div>
+<div class="ulist">
+<ul>
+<li><p>Download the voice package of your choice from <a href="https://network.nuance.com/">https://network.nuance.com</a>.</p></li>
+<li><p>Extract the voice package file, e.g. to D:\Nuance_voices\enu_ava-ml_premium-high_1-0-0.</p></li>
+<li><p>Create a directory named “vocalizer” below D:\Nuance_voices.</p></li>
+<li><p>Copy the .dat files from<br/>
+       &nbsp;&nbsp;&nbsp;&nbsp;D:\Nuance_voices\enu_ava-ml_premium-high_1-0-0\languages\enu\speech\components<br/>
+       and the .hdr file from<br/>
+       &nbsp;&nbsp;&nbsp;&nbsp;D:\Nuance_voices\enu_ava-ml_premium-high_1-0-0\languages\enu\speech\ve<br/>
+       to<br/>
+       &nbsp;&nbsp;&nbsp;&nbsp;D:\Nuance_voices\vocalizer</p></li>
+<li><p>For all files below D:\Nuance_voices\vocalizer, change the file extension from .hdr to .jet and from .dat to .xmf.</p></li>
+<li><p>Repeat the previous steps for other voices you want to put into the expansion file.
+       Please make sure that the total size of all files in the  “vocalizer” directory does not exceed 2 GB.</p></li>
+<li><p>Create an OBB file from the “vocalizer” directory:<br/>
+       &nbsp;&nbsp;&nbsp;&nbsp;<tt>cd D:\Nuance_voices</tt><br/>
+       &nbsp;&nbsp;&nbsp;&nbsp;<tt>zip -r -n .xmf:.jet main.1.com.nuance.vocalizer.langpack.obb vocalizer/*</tt><br/>
+       Please note that the name of the expansion file has to follow a specific scheme, refer to
+       <a href="http://developer.android.com/google/play/expansion-files.html#Filename">APK Expansion Files - File name format</a>
+       for details. Furthermore, please also note that Vocalizer doesn't support
+	   compressed OBB files. Therefore you have to pass option -n to the zip command.</p></li>
+<li><p>Copy the expansion file to your Android device/emulator into a folder named<br/>
+       &lt;shared-storage&gt;/Android/obb/com.nuance.vocalizer.langpack/<br/>where &lt;shared-storage&gt; is
+       the path to the shared storage space, available from getExternalStorageDirectory() (refer to
+       <a href="http://developer.android.com/google/play/expansion-files.html#StorageLocation">APK Expansion Files - Storage location</a>
+       for details). The voice data is now accessible from the Vocalizer sample application.</p></li>
+</ul>
+</div>
+<div class="paragraph"><p>Advantages:</p></div>
+<div class="ulist">
+<ul>
+<li><p>Load multiple and/or large voices up to a total size of 2 GB.</p></li>
+<li><p>Voice data is wrapped in a ZIP file, no need to extract it to internal memory or SD card.</p></li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_reusing_the_vocalizerengine_class_in_your_own_project">4.4. Reusing the VocalizerEngine class in your own project</h3><div style="clear:left"></div>
+<div class="paragraph"><p>To start using the <tt>VocalizerEngine</tt> and related classes in your own application you need to follow the following steps:</p></div>
+<div class="ulist"><ul>
+<li>
+<p>
+Copy the contents of the <tt>/bin</tt> folder into the <tt>libs</tt> folder of your application project (i.e. the <tt>vocalizerlib.jar</tt> file and the <tt>armeabi</tt> folder
+containing the native library). You should end up with the following structure:
+<pre><tt>MyTtsApp
++--libs
+   +--armeabi-v8a
+      +--libNuanceVocalizer.so
+   +--vocalizerlib.jar
+</tt></pre>
+</p>
+</li>
+<li>
+<p>
+(Assuming Eclipse is used) In your application properties, go to Java Build Path -> Libraries and click "Add External JAR" and select <tt>libs/vocalizerlib.jar</tt>.
+</p>
+</li>
+<li>
+<p>
+In your code, add <tt>import com.nuance.android.vocalizer.*;</tt>
+</p>
+</li>
+<li>
+<p>
+Implement the required interfaces and call the VocalizerEngine methods as described in the documentation. You can also refer to the VocalizerSample sample code for details on how to use the Vocalizer Expressive library.
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_vocalizerengine_class_reference">5. The VocalizerEngine class reference</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Please refer to the HTML documentation found in the <tt>/doc</tt> folder.</p></div>
+</div>
+</div>
+</div>
+
+<div id="footer">
+<div id="footer-text">
+Last updated 2016-12-19 17:00 UTC
+</div>
+</div>
+</body>
+</html>

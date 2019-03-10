@@ -1,0 +1,15 @@
+syntax = "proto2";
+package my;
+
+message huyang
+{
+	enum huyangStatus
+	{
+		one = 1;
+		two = 2;
+		three = 3;
+		max = 4;
+	}
+    optional string result = 1;
+    optional huyangStatus status =2;
+}

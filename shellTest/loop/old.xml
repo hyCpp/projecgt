@@ -1,0 +1,4 @@
+<action-result agent="phone" op="getMessageState">
+    <taskId id="2">1</taskId>
+    <instanceId id="%1" supporttype="%2" hasoutbox="%3">32</instanceId>
+</action-result>

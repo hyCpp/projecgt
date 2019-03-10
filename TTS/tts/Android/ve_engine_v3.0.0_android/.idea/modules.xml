@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Vocalizer Language Pack/Vocalizer Language Pack.iml" filepath="$PROJECT_DIR$/Vocalizer Language Pack/Vocalizer Language Pack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VocalizerSample/VocalizerSample.iml" filepath="$PROJECT_DIR$/VocalizerSample/VocalizerSample.iml" />
+    </modules>
+  </component>
+</project>

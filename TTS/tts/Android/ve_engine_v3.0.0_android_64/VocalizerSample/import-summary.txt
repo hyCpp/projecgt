@@ -1,0 +1,84 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea/
+* .idea/workspace.xml
+* app/
+* app/build.gradle
+* app/libs/vocalizerlib.jar
+* app/lint.xml
+* app/proguard.cfg
+* app/src/
+* app/src/main/
+* app/src/main/AndroidManifest.xml
+* app/src/main/assets/
+* app/src/main/assets/vocalizer/
+* app/src/main/assets/vocalizer/clm.xmf
+* app/src/main/assets/vocalizer/enu_ava_embedded-compact_1-0-0.xmf
+* app/src/main/assets/vocalizer/lid.xmf
+* app/src/main/assets/vocalizer/synth_med_fxd_bet3f22.xmf
+* app/src/main/assets/vocalizer/sysdct.xmf
+* app/src/main/assets/vocalizer/ve_pipeline_enu_ava_22_embedded-compact_1-0-0.jet
+* app/src/main/java/
+* app/src/main/java/com/
+* app/src/main/java/com/example/
+* app/src/main/java/com/example/ExampleActivity.java
+* app/src/main/java/com/example/MouthView.java
+* app/src/main/java/com/example/OsciView.java
+* app/src/main/jniLibs/
+* app/src/main/jniLibs/arm64-v8a/
+* app/src/main/jniLibs/arm64-v8a/libNuanceVocalizer.so
+* app/src/main/res/
+* app/src/main/res/drawable-hdpi/
+* app/src/main/res/drawable-hdpi/icon.png
+* app/src/main/res/drawable-ldpi/
+* app/src/main/res/drawable-ldpi/icon.png
+* app/src/main/res/drawable-mdpi/
+* app/src/main/res/drawable-mdpi/icon.png
+* app/src/main/res/layout/
+* app/src/main/res/layout/main.xml
+* app/src/main/res/values/
+* app/src/main/res/values/strings.xml
+* build.gradle
+* gradle/
+* gradle/wrapper/
+* gradle/wrapper/gradle-wrapper.jar
+* gradle/wrapper/gradle-wrapper.properties
+* gradlew
+* gradlew.bat
+* settings.gradle
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets/
+* libs/arm64-v8a/libNuanceVocalizer.so => app/src/main/jniLibs/arm64-v8a/libNuanceVocalizer.so
+* libs/vocalizerlib.jar => app/libs/vocalizerlib.jar
+* lint.xml => app/lint.xml
+* proguard.cfg => app/proguard.cfg
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

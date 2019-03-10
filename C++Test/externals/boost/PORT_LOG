@@ -1,0 +1,30 @@
+Boost version
+1.57
+
+Extract sub modules of Boost
+./bcp smart_ptr ../3rdParty/boost/
+./bcp pool ../3rdParty/boost/
+./bcp bind ../3rdParty/boost/
+./bcp functional ../3rdParty/boost/
+./bcp any ../3rdParty/boost/
+./bcp array ../3rdParty/boost/
+./bcp tuple ../3rdParty/boost/
+./bcp variant ../3rdParty/boost/
+./bcp assign ../3rdParty/boost/
+./bcp atomic ../3rdParty/boost/
+./bcp lambda ../3rdParty/boost/
+./bcp lockfree ../3rdParty/boost/
+./bcp log ../3rdParty/boost/
+./bcp polygon ../3rdParty/boost/
+./bcp property_tree  ../3rdParty/boost/
+./bcp uuid ../3rdParty/boost/
+./bcp algorithm ../3rdParty/boost/
+./bcp spirit ../3rdParty/boost/
+
+Hack sources to avoid link library
+boost/config/user.hpp
+--------------------------------------------
+#define BOOST_DISABLE_THREADS
+#ifndef BOOST_SYSTEM_NO_DEPRECATED
+#define BOOST_SYSTEM_NO_DEPRECATED 1
+#endif

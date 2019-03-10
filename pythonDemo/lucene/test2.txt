@@ -1,0 +1,53 @@
+2repo init -u ssh://igerrit.storm:29418/Src/iAutoPlatform/iAuto3/manifest -b iAuto3/Demo/muifa_vui_phase1_alexa -m navi.xml
+1. 用以下路径image升级iAuto3机器
+\\ibigfox\Release\iAuto3\Suntec_Release\Demo\muifa_vui_phase1_alexa\RELEASE\DL_180104\1.004500_2_rcarm3muifa_eng
+
+下面拷入数据前先 mount -o rw,remount /system
+2. 地图数据（如果已有不需要）：
+将\\uranus\iBigtom\iAuto3\muifa\12_Data\NaviData\USA\20170929该目录下的 .MAPDATA 文件拷入/pdata/下面
+ cp  -r /udisk/.MAPDATA /pdata/
+ sync
+ 
+3.语音数据nuance（如果已有不需要）：
+将\\uranus\iBigtom\iAuto3\muifa\12_Data\VoiceData\Release_20171215_A 该目录下的 .VUIDATA 文件拷入/pdata/下面
+ cp  -r /udisk/.VUIDATA /pdata/
+ sync
+ 
+ 4.语音数据Alexa
+ 将\\iBigtom\Group\Users\chengjun\bianmaosong\iAuto3_Alexa 下的 vendor 和 avs_data(需要账号) 机器/data/下面，具体如下：
+ cp -r /udisk/vendor /data/
+sync
+
+cd /data/vendor
+./install.sh all iauto3 1                 安装vendor下面的库
+sync
+ 
+cp -r /udisk/avs_data /data/
+sync
+重命令json来切换用户
+ #switch audioin channel
+1. 修改/etc/asound.conf
+pcm.mic_bak {
+    type plug
+    slave {
+        pcm "hw:0,3"
+        channels 2
+        rate 48000
+        format S16_LE           <--------------这一行修改
+    }   
+    # ttable.A.B G
+    # where A - input channel
+    #       B - output channel
+    #       G - volume gain (1.0 = original)
+
+    ttable.0.0 16.0
+    ttable.1.1 16.0
+}
+
+ 5.上述配置完成后，重启机器，开机后看网络是否正常(如果正常时间会自动同步)，当画面弹出start Service successful的提示框说明引擎启动成功
+ 6.音认引擎切换(nuance和Alexa) ：
+ I. 点击设置按钮（屏幕左下角齿轮）
+ II. 画面拉到最下面，点击about iauto 进去
+ III. 画面出现iAuto.com 图标，按顺序点击 A o A o，进入开发者画面
+ IV. 画面拉到最下面，点击VREngine进行切换，切换后机器自动重启。
+  导航去上海人民广场 

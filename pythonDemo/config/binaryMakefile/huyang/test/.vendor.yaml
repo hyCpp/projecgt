@@ -1,0 +1,11 @@
+VERSION: "2.0"
+
+HEADFILE:
+    - process/*.h
+    - protofiles/*.fbs
+
+
+MODULE:
+    - devicemanager
+    - libdmsprotodummy.so
+

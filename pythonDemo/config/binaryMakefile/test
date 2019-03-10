@@ -1,0 +1,22 @@
+Src/14Model/iAutoPlatform/JA158/system/update						huyang			- update
+Src/14Model/iAutoPlatform/JA158/system/sysd	    					mengfanbing			- sysd
+Src/14Model/iAutoPlatform/JA158/system/netd							mengfanbing	- netd
+Src/14Model/iAutoPlatform/JA158/system/btd							mengfanbing	- btd
+Src/14Model/iAutoPlatform/JA158/framework/service/VehicleServer		wangjiawei	- VehicleServer
+Src/14Model/iAutoPlatform/JA158/framework/service/Opening			wangjiawei	- Opening
+Src/14Model/iAutoPlatform/JA158/framework/service/MediaServer		zhangming	    
+    - mediaserver
+    - mediarse
+    - mediadab
+    - mediaipod
+    - mediabrowser
+    - mediaaap
+    - mediaaam
+    - mediamirrorlink
+    - mediacarplay
+    - mediamiracast
+    - mediadvd
+    - mediadlna
+    - mediabtaudio
+    - mediatuner"
+

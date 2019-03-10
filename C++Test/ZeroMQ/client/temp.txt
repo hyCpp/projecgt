@@ -1,0 +1,352 @@
+void* client1(void* content)
+{
+//    void *content = zmq_ctx_new();
+    void *socket = zmq_socket(content, ZMQ_REQ);
+    int rc = zmq_connect(socket, "inproc://server");
+    printf("connecting to hello world server ...\n");
+    assert(rc == 0);
+
+    for (int req = 0; req != 10; ++req) {
+        s_send(socket, "I am client1");
+        printf("client1 received : [%s]\n", s_recv(socket));
+        s_sleep(1000);
+    }
+}
+
+void client2(void* content)
+{
+//    void *content = zmq_ctx_new();
+    void *socket = zmq_socket(content, ZMQ_REQ);
+    int rc = zmq_connect(socket, "inproc://server");
+    printf("connecting to hello world server ...\n");
+    assert(rc == 0);
+
+    for (int req = 0; req != 10; ++req) {
+        s_send(socket, "I am client2");
+        printf("client2 received : [%s]\n", s_recv(socket));
+        s_sleep(1000);
+    }
+}
+
+void* server(void* content)
+{
+//    void *content = zmq_ctx_new();
+    void *socket = zmq_socket(content, ZMQ_REP);
+    int rc = zmq_bind(socket, "inproc://hello");
+    assert(rc == 0);
+
+    for (;;) {
+        printf("server received : [%s]\n", s_recv(socket));
+        s_send(socket, "I am server");
+    }
+}
+
+
+void* client3(void* context)
+{
+    s_sleep(2000);
+    void* client = zmq_socket(context, ZMQ_PAIR);
+    int rc = zmq_connect(client, "inproc://hello");
+    assert(rc == 0);
+
+    s_sleep(2000);
+    while(1)
+    {
+        char buffer[10];
+        printf("Client: Sending Hello...\n");
+        zmq_send (client, "Hello", 5, 2);
+        zmq_send (client, "Hello1", 5, ZMQ_DONTWAIT);
+        zmq_recv (client, buffer, 10, 0);
+        printf("Client: Received World! [%s]\n", buffer);
+    }
+    zmq_close(client);
+    return NULL;
+}
+
+void* server1(void *content)
+{
+    void* responder = zmq_socket(content, ZMQ_PAIR);
+    int rc = zmq_bind(responder, "inproc://hello");
+    assert(rc == 0);
+
+    while (1) {
+        char buffer[10];
+        zmq_recv(responder, buffer, 10, 0);
+        printf("I am responder server! Recv Hello [%s]\n", buffer);
+        s_sleep(1000);
+        zmq_send(responder, "World", 5, ZMQ_DONTWAIT);
+    }
+}
+
+static char errorBuffer[CURL_ERROR_SIZE];
+
+static int writer(char* data, size_t size, size_t nmemb, std::string* writerData)
+{
+    unsigned long sizes = size * nmemb;
+    if (writerData == NULL) {
+        return 0;
+    }
+
+    writerData->append(data, sizes);
+    return sizes;
+}
+
+static bool init(CURL*& conn, char* url, std::string* p_buffer)
+{
+    CURLcode code;
+    conn = curl_easy_init(); // 函数得到 easy interface型指针
+    if (conn == NULL) {
+        printf("Failed to create CURL connection\n");
+        exit(EXIT_FAILURE);
+    }
+
+    // curl_easy_setopt :
+
+    /**
+        CURLOPT_URL: URL地址
+        URLOPT_WRITEFUNCTION 实现回调函数,CURLOPT_WRITEDATA用于表明CURLOPT_WRITEFUNCTION函数中的stream指针的来源
+        CURLOPT_FOLLOWLOCATION  设置重定位URL
+        CURLOPT_TIMEOUT 设置传输时间，CURLOPT_CONNECTIONTIMEOUT 设置连接等待时间
+        CURLOPT_READFUNCTION 读取数据传递给远程主机,CURLOPT_READDATA 表明CURLOPT_READFUNCTION函数原型中的stream指针来源
+        CURLOPT_POSTFIELDS: POST参数
+        CURLOPT_WRITEFUNCTION: 对返回的数据进行操作的函数地址
+        CURLOPT_WRITEDATA: 设置WRITEFUNCTION的第四个参数值
+        CURLOPT_POST: 设置为非0表示本次操作为POST
+        CURLOPT_VERBOSE: 设置为非0在执行时打印请求信息
+        CURLOPT_HEADER: 设置为非0将响应头信息同响应体一起传给WRITEFUNCTION
+        CURLOPT_FOLLOWLOCATION: 设置为非0，响应头信息Location
+*/
+    code = curl_easy_setopt(conn, CURLOPT_ERRORBUFFER, errorBuffer); // 设置传输选项
+    if (code != CURLE_OK) {
+        printf("Failed to set error buffer [%s]\n", errorBuffer);
+        return false;
+    }
+
+    code = curl_easy_setopt(conn, CURLOPT_URL, url);
+    if (code != CURLE_OK) {
+        printf("Failed to set url [%s]\n", errorBuffer);
+        return false;
+    }
+
+    code = curl_easy_setopt(conn, CURLOPT_FOLLOWLOCATION, 1);
+    if (code != CURLE_OK) {
+        printf("Failed to set error buffer [%s]\n", errorBuffer);
+        return false;
+    }
+
+    code = curl_easy_setopt(conn, CURLOPT_WRITEFUNCTION, writer); // 设置的传输选项，实现回调函数以完成用户特定任务
+    if (code != CURLE_OK) {
+        printf("Failed to set writer  [%s]\n", errorBuffer);
+        return false;
+    }
+
+    code = curl_easy_setopt(conn, CURLOPT_WRITEDATA, p_buffer);
+    if (code != CURLE_OK) {
+        printf("Failed to set writer date [%s]\n", errorBuffer);
+        return false;
+    }
+
+    return true;
+}
+
+static int writer2(void* data, size_t size, size_t nmemb, FILE* writerData)
+{
+    if (writerData == NULL) {
+        return 0;
+    }
+
+    size_t len = fwrite(data, size, nmemb, writerData);
+    return len;
+}
+static const char _curl_slist_append[] = "Expect:";
+
+int CurlDebug(CURL *pcurl, curl_infotype itype, char * pData, size_t size, void *)
+{
+    if(itype == CURLINFO_TEXT)
+    {
+        std::cout << "[TEXT]:" << pData;
+    }
+    else if(itype == CURLINFO_HEADER_IN)
+    {
+        std::cout << "[HEADER_IN]:" << pData;
+    }
+    else if(itype == CURLINFO_HEADER_OUT)
+    {
+        std::cout << "[HEADER_OUT]:" << pData;
+    }
+    else if(itype == CURLINFO_DATA_IN)
+    {
+        std::cout << "[DATA_IN]:" << pData;
+    }
+    else if(itype == CURLINFO_DATA_OUT)
+    {
+        std::cout << "[DATA_OUT]:" << pData;
+    }
+    return 0;
+}
+bool initUpload(CURL *&curl, char *url)
+{
+    printf("initUpload \n");
+    std::string _filePath = "/AudioUploadServer.txt";
+    CURLcode res;
+    struct curl_httppost* formpost = nullptr;
+    struct curl_httppost* lastptr = nullptr;
+    struct curl_slist* headerlist = nullptr;
+
+    curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "input_file", CURLFORM_FILE, _filePath.c_str(), CURLFORM_END);
+//    curl_formadd(&formpost, &lastptr, CURLFORM_COPYNAME, "submit", CURLFORM_COPYCONTENTS, "提交", CURLFORM_END);
+    curl = curl_easy_init();
+
+    res = curl_easy_setopt(curl, CURLOPT_ERRORBUFFER, errorBuffer);
+    headerlist = curl_slist_append(headerlist, _curl_slist_append);
+
+    if (nullptr == curl) {
+        printf("curl_easy_init failed [%s]", errorBuffer);
+        return false;
+    }
+
+    if (CURLE_OK != res) {
+        printf("Failed to set error buffer [%s]", errorBuffer);
+        return false;
+    }
+
+    res = curl_easy_setopt(curl, CURLOPT_URL, url);
+    if (CURLE_OK != res) {
+        printf("curl_easy_setopt failed [%s]", errorBuffer);
+        return false;
+    }
+
+    res = curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headerlist);
+    if (CURLE_OK != res) {
+        printf("curl_easy_setopt failed [%s]", errorBuffer);
+        return false;
+    }
+
+    res = curl_easy_setopt(curl, CURLOPT_HTTPPOST, formpost);
+    if (CURLE_OK != res) {
+        printf("curl_easy_setopt failed [%s]", errorBuffer);
+        return false;
+    }
+
+    res = curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
+    if (CURLE_OK != res) {
+        printf("curl_easy_setopt failed [%s]", errorBuffer);
+        return false;
+    }
+
+    res = curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
+    if (CURLE_OK != res) {
+        printf("curl_easy_setopt failed [%s]", errorBuffer);
+        return false;
+    }
+
+    res = curl_easy_setopt(curl, CURLOPT_TIMEOUT, 5);
+    if (CURLE_OK != res) {
+        printf("curl_easy_setopt failed [%s]", errorBuffer);
+        return false;
+    }
+
+    res = curl_easy_setopt(curl, CURLOPT_DEBUGFUNCTION, CurlDebug);
+    if (CURLE_OK != res) {
+        printf("curl_easy_setopt failed [%s]", errorBuffer);
+        return false;
+    }
+
+    res = curl_easy_setopt(curl, CURLOPT_VERBOSE, true);
+    if (CURLE_OK != res) {
+        printf("curl_easy_setopt failed [%s]", errorBuffer);
+        return false;
+    }
+
+//    res = curl_easy_setopt(curl, CURLOPT_HEADER, 1L);
+//    if (CURLE_OK != res) {
+//        VR_LOGD("curl_easy_setopt failed [%s]", errorBuffer);
+//        return false;
+//    }
+
+    return true;
+}
+
+#define VR_CURL_POST_URL "http://34.235.234.175:8080/upload/file/upload"
+
+void* UploadAudio(void*)
+{
+    printf("upload Audio begin \n");
+
+    CURLcode res;
+    CURL *curl = nullptr;
+    res = curl_global_init(CURL_GLOBAL_ALL); // init only one
+
+    if (!initUpload(curl, VR_CURL_POST_URL)) {
+        printf("UploadAudio Connection initializion failed");
+    }
+
+    res = curl_easy_perform(curl);
+
+    if (CURLE_OK != res) {
+        printf("curl_easy_perform() failed=[%d][%s] \n", res, curl_easy_strerror(res));
+        curl_easy_cleanup(curl);
+    }
+
+    printf("upload Audio success \n");
+
+    curl_global_cleanup();
+}
+
+void download()
+{
+    CURL* conn = NULL;
+    CURLcode code;
+    std::string buffer;
+    curl_global_init(CURL_GLOBAL_DEFAULT); // 初始化libcurl, 这个函数只能用一次, 其实在调用curl_global_cleanup 函数后仍然可再用, 不能保证线程安全
+    char* url = "172.16.211.50/cc2/cc/getfile.php";
+
+    if (!init(conn, url, &buffer)) {
+        printf("Connection initializion failed\n");
+        exit(EXIT_FAILURE);
+    }
+
+    code = curl_easy_perform(conn); // 函数完成传输任务
+    if (code != CURLE_OK) {
+        printf("Failed to get ‘%s’ [%s]\n", url, errorBuffer);
+        exit(EXIT_FAILURE);
+    }
+
+    FILE* file = fopen("1.gif", "wb");
+    fseek(file, 0, SEEK_SET);
+    fwrite(buffer.c_str(), 1, buffer.size(), file);
+    fclose(file);
+    curl_easy_cleanup(conn);
+    printf("%s\n", buffer.c_str());
+}
+
+void zmq_test()
+{
+    pthread_t tid[5];
+    void *content = zmq_ctx_new();
+    int err = pthread_create(&tid[0], NULL, client1, content);
+    if (err != 0) {
+        printf("%s\n", strerror(err));
+    }
+
+    err = pthread_create(&tid[1], NULL, server, content);
+    if (err != 0) {
+        printf("%s\n", strerror(err));
+    }
+
+    err = pthread_create(&tid[2], NULL, (void* (*)(void*))client2, content);
+    if (err != 0) {
+        printf("%s\n", strerror(err));
+    }
+
+    err = pthread_create(&tid[3], NULL, server1, content);
+    if (err != 0) {
+        printf("%s\n", strerror(err));
+    }
+
+    err = pthread_create(&tid[4], NULL, client3, content);
+    if (err != 0) {
+        printf("%s\n", strerror(err));
+    }
+    while(1);
+}

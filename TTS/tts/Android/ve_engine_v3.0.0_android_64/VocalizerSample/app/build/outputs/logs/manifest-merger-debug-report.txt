@@ -1,0 +1,59 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:2:1-18:12
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:2:1-18:12
+	package
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:3:7-28
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:5:7-32
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:4:7-30
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:7:5-74
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:7:5-74
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:7:5-74
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:7:5-74
+INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:7:5-74
+	android:targetSdkVersion
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:7:42-71
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:7:15-41
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+		INJECTED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml
+application
+ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:8:5-17:19
+	android:label
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:8:48-80
+	android:icon
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:8:18-47
+activity#com.example.ExampleActivity
+ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:9:9-15:20
+	android:label
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:10:19-51
+	android:name
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:9:19-50
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:11:13-14:29
+action#android.intent.action.MAIN
+ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:12:17-69
+	android:name
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:12:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:13:17-77
+	android:name
+		ADDED from /home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/AndroidManifest.xml:13:27-74

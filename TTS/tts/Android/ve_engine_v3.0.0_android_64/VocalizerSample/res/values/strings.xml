@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vocalizer Sample</string>
+    <string name="state_initialized">Engine initialized</string>
+    <string name="state_ready">Engine is ready</string>
+    <string name="state_speaking">Engine is speaking</string>
+    <string name="state_paused">Engine is paused</string>
+    <string name="state_uninitialized">Engine is uninitialized</string>
+    <string name="default_value">Default</string>
+    <string name="initialize">Initialize</string>
+    <string name="speak">Speak</string>
+    <string name="stop">Stop</string>
+    <string name="release">Release</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="selectvoice_prompt">Select a voice from the list:</string>
+    <string name="volume_prompt">Volume:</string>
+    <string name="rate_prompt">Rate:</string>
+    <string name="pitch_prompt">Pitch:</string>
+    <string name="demotext">Nuance Vocalizer Expressive is the complete spoken output engine that provides seamless conversations so you can tell your customers anything they need to hear. Built on a legacy of research and expertise, Vocalizer is used around the world in over 40 different languages.</string>
+</resources>

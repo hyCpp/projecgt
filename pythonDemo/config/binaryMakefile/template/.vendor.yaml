@@ -1,0 +1,10 @@
+VERSION: "2.0"
+
+HEADFILE:
+xxxx
+
+NORMAL_MODULE:
+oooo
+
+HOST_MODULE:
+host_variable

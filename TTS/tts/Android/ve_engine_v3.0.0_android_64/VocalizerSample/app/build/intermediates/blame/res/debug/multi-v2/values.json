@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "2,8,19,9,13,18,17,12,14,15,10,3,6,4,5,7,11,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,422,947,472,644,899,853,600,684,726,522,109,292,174,230,350,562,803",
+                        "endColumns": "53,49,309,49,39,47,45,43,41,76,39,64,57,55,61,71,37,49",
+                        "endOffsets": "104,467,1252,517,679,942,894,639,721,798,557,169,345,225,287,417,595,848"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,109,159,469,519,559,607,653,697,739,816,856,921,979,1035,1097,1169,1207",
+                        "endColumns": "53,49,309,49,39,47,45,43,41,76,39,64,57,55,61,71,37,49",
+                        "endOffsets": "104,154,464,514,554,602,648,692,734,811,851,916,974,1030,1092,1164,1202,1252"
+                    }
+                }
+            ]
+        }
+    ]
+}

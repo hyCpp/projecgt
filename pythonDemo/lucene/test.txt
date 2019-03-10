@@ -1,0 +1,325 @@
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogReplier::notifyNotifyVRAction(int32_t, int32_t, const string&)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogReplier::notifyNotifyVRAction(int32_t, int32_t, const string&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceVoiceRecogImpl::notifyVRAction(int32_t, int32_t, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [notifyVRAction]Current actionXml value is [<action agent="media" op="changeSource"><sourceid>82</sourceid></action>]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceVoiceRecogMediaImpl::notifyMediaAcionOnRequestResult(int32_t, int32_t, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> action result is [<action agent="media" op="changeSource"><sourceid>82</sourceid></action>]
+D/L15VR   ( 1434): VRCommon::onNotify()  >>>>>> fc://voice/voicerecog/notify/action <<<<<<<<<
+D/L15VR   ( 1434): VRAppServiceNaviHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/action
+D/L15VR   ( 1434): VRAppServiceNaviHandle::onVRFCNotify analysisNotifyData->data is map
+D/L15VR   ( 1434): VRAppServiceNaviHandle::getActionPra  key is actionType
+D/L15VR   ( 1434): VRAppServiceNaviHandle::getActionPra  contains this key
+D/L15VR   ( 1434): VRAppServiceNaviHandle::getActionPra  res is changeSource
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/action
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify analysisNotifyData->data is map
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify action type is changeSource
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify action type is otherwise
+D/L15VR   ( 1434): VRAppServiceAudioHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/action
+D/L15VR   ( 1434): VRAppServiceAudioHandle:: FC_VOICE_VOICERECOG_NOTIFY_ACTION
+D/L15VR   ( 1434): VRAppServiceAudioHandle::onVRNotify() : m_currentSource: 25
+D/L15VR   ( 1434): VRAppServiceAudioHandle::onVRNotify() : m_currentBand: 3
+D/L15VR   ( 1434): VRAppServiceAudioHandle::getIntKeyData : key: sourceid
+D/L15VR   ( 1434): VRAppServiceAudioHandle::getIntKeyData : keyData: 82
+D/L15VR   ( 1434): VRAppServiceAudioHandle::covertSourceToMediaType(int souce) souce: 82
+D/L15VR   ( 1434):索引
+D/L15VR   ( 1434): VRAppServiceAudioHandle::covertSourceToMediaType() contains NGSource is 3
+D/L15VR   ( 1434): VRAppServiceAudioHandle::onVRNotify() : m_originSource: 82, m_targetSource: 3
+D/L15VR   ( 1434): VRAppServiceAudioHandle:: FC_VOICE_ACTION_TYPE
+D/L15VR   ( 1434): VRAppServiceAudioHandle::doActionOperate() actionType: changeSource,  m_originSource: 82
+D/L15VR   ( 1434): VRAppServiceAudioHandle::initRadioInfo()
+D/L15VR   ( 1434): VRAppServiceAudioHandle::initSxmInfo()
+D/L15VR   ( 1434): VRAppServiceAudioHandle::initNorMusicStruct()
+D/L15VR   ( 1434): VRAppServiceAudioHandle::initUSBInfo()
+D/L15VR   ( 1434): VRAppServiceAudioHandle::initIPODInfo()
+D/L15VR   ( 1434): VRAppServiceAudioHandle::m_actionId is  changeSource)
+D/L15VR   ( 1434): VRAppServiceAudioHandle::checksource, iSrcId: 3
+D/L15VR   ( 1434): VRAppServiceAudioHandle::getFCModelPoint, type: 19
+D/L15VR   ( 1434): VRFCCommon::getFCPoint() type 19
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() fcPoint 0x1447358 bForce 1
+D/L15VR   ( 1434): VRAppServiceAudioHandle::checksource, NULL != pModel
+D/L15VR   ( 1434): VRAppServiceAudioHandle::checkSrcValid iSrcId: (3), backValue:(0)
+D/L15VR   ( 1434): VRAppServiceAudioHandle::changeSourceAct, vaildSource: 1
+D/L15VR   ( 1434): VRAppServiceAudioHandle::innerSource()
+D/L15VR   ( 1434): VRAppServiceAudioHandle::innerSource() out souece
+D/L15VR   ( 1434): VRAppServiceAudioHandle::getChangedSource(): origin: 82, target: 3
+D/L15VR   ( 1434): VRAppServiceAudioHandle::getIpodNum(): tempSource: 3
+D/L15VR   ( 1434): changeSourceAct , changeSource: 3
+D/L15VR   ( 1434): VRAppServiceAudioHandle::sourceFlagBycourtry()
+D/L15VR   ( 1434): VRAppServiceAudioHandle::ChangeSoundMode(modeId, screenId, flag)
+D/L15VR   ( 1434): VRAppServiceAudioHandle::startTimer()
+D/L15VR   ( 1434): VRAppServiceCommonHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/action
+D/L15VR   ( 1434): VRAppServiceCommonHandle::onVRFCNotify analysisNotifyData->data is map
+D/L15VR   ( 1434): VRAppServiceCommonHandle::onVRFCNotify action type is changeSource
+D/L15VR   ( 1434): VRAppServiceCliamteHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/action
+D/L15VR   ( 1434): VRAppServiceCliamteHandle::onVRFCNotify analysisNotifyData->data is map
+D/L15VR   ( 1434): VRAppServiceAppHandle::onVRNotify() uri is fc://voice/voicerecog/notify/action
+D/L15VR   ( 1434): VRAppServiceAppHandle::onVRNotify analysisNotifyData->data is map
+D/L15VR   ( 1434): VRSelectHint::onNotify() fc://voice/voicerecog/notify/action
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::checkTaskId() always true
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[void VoiceVoiceRecogMediaImpl::notifyMediaAcionOnRequestResult(int32_t, int32_t, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[void VoiceVoiceRecogImpl::notifyVRAction(int32_t, int32_t, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogFunctionControl::onRequest(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> uri = fc://voice/voicerecog/req/actionresult
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceVoiceRecogImpl::notifySendActionResult(const QString&, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> action result is [success] and current actionOP is [changeSource] and current m_taskID is [2761]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[void VoiceVoiceRecogImpl::notifySendActionResult(const QString&, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogFunctionControl::onRequest(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogReplier::notifyRecognizeResult(int32_t, const string&)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogReplier::notifyRecognizeResult(int32_t, const string&)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogReplier::notifyRecogEngineStatusChanged(int32_t, const string&)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogReplier::notifyRecogEngineStatusChanged(int32_t, const string&)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogReplier::notifyNotifyIsVoiceSettingAvailable(bool)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogReplier::notifyNotifyIsVoiceSettingAvailable(bool)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogReplier::notifyNotifyVoiceRecogServiceVoiceTagStatus(bool)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogReplier::notifyNotifyVoiceRecogServiceVoiceTagStatus(bool)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceVoiceRecogImpl::notifyOnRequestResult(int32_t, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogImpl::notifyOnRequestResult taskID=[22], recogResult=[<display agent="Common" content="QuitVRApp" />
+D/VoiceVoiceRecog( 1434): ]
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception !---tag [agent] is not exist
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception!
+E/VoiceVoiceRecog( 1434): <  59a> agentAttriValue is [Common] ----contentAttriValue is [QuitVRApp] ----agentTagValue is []
+D/VoiceVoiceRecog( 1434): <  59a> Current content is QuitVRApp , It will notify UI to exit. taskid = [22]
+D/L15VR   ( 1434): VRCommon::onNotify()  >>>>>> fc://voice/voicerecog/notify/exitvrapp <<<<<<<<<
+D/L15VR   ( 1434): VRAppServiceNaviHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/exitvrapp
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/exitvrapp
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify uri is otherwise
+D/L15VR   ( 1434): VRAppServiceAudioHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/exitvrapp
+D/L15VR   ( 1434): VRAppServiceCommonHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/exitvrapp
+D/L15VR   ( 1434): VRAppServiceCliamteHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/exitvrapp
+D/L15VR   ( 1434): VRAppServiceAppHandle::onVRNotify() uri is fc://voice/voicerecog/notify/exitvrapp
+D/L15VR   ( 1434): VRSelectHint::onNotify() fc://voice/voicerecog/notify/exitvrapp
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::checkTaskId() always true
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[void VoiceVoiceRecogImpl::notifyOnRequestResult(int32_t, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceVoiceRecogImpl::notifyOnRequestResult(int32_t, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogImpl::notifyOnRequestResult taskID=[22], recogResult=[<display agent='Common' content='VRState'><state>quit</state><engineType>local</engineType></display>]
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception !---tag [agent] is not exist
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception!
+E/VoiceVoiceRecog( 1434): <  59a> agentAttriValue is [Common] ----contentAttriValue is [VRState] ----agentTagValue is []
+D/VoiceVoiceRecog( 1434): <  59a> current status is [quit]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceMeterImpl::notifyVRState(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception !---tag [meterCooperation] is not exist
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception!
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception !---tag [tag] is not exist
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception!
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception !---tag [nbest] is not exist
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception!
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception !---tag [result] is not exist
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception!
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception !---tag [prompt] is not exist
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception!
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[void VoiceMeterImpl::notifyVRState(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceVoiceRecogImpl::updatePauseResumeModel(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[void VoiceVoiceRecogImpl::updatePauseResumeModel(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVRInfoBaseModel::onUpdateModelData() key = VRState
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVREUListModel::onUpdateModelData() key = VRState
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogVRCommonListModel::onUpdateModelData(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogVRCommonListModel::onUpdateModelData(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogAudioBaseModel::onUpdateModelData() key=[VRState]
+D/VoiceVoiceRecog( 1434): <  59a>  VoiceVoiceRecogAudioListModel::onUpdateModelData(QString key, QVariant data)
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::onUpdateModelData() key = VRState
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogCommonBaseModel::setRecognizedState(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogCommonBaseModel::setRecCommand(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VR_Performance] UI setRecCommand: setRecCommandcurrent =
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::setRecCommand()------- command is
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogCommonBaseModel::setRecCommand(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogCommonBaseModel::setRecognizedState(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogCommonBaseModel::setVRState(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> state = localquit
+D/L15VR   ( 1434): VRStateBar::isProcessing() false
+D/L15VR   ( 1434): VRImagePlayer::setStarted() 0
+D/L15VR   ( 1434): VRImagePlayer::setStarted() 0
+D/L15VR   ( 1434): VRStateBar::isProcessing() false
+D/L15VR   ( 1434): VRVoulmeBarPlayer::startPlay() current = 0 set 0
+D/L15VR   ( 1434): VRAppServiceCommonHandle::onVRStateChanged() VRState is: localquit
+D/L15VR   ( 1434): VRAppServiceCommonHandle::onVRStateChanged(): Notify UIFW that current state is NGVR_NONE
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogCommonBaseModel::setVRState(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::onUpdateModelData vrState is (localquit)
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::shouldLocked(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::shouldLocked(localquit)
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::shouldLocked(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::shouldLockedEU(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::shouldLockedEU(localquit)
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::shouldLockedEU(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::isDealing(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::isDealing(localquit)
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::isDealing(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::isreading(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::isreading vrState is (localquit)
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::isreading(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogCommonBaseModel::setVRLockState(bool)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::setVRLockState() origin 0 change to 0
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogCommonBaseModel::setVRLockState(bool)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogCommonBaseModel::setVREULockState(bool)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::setVREULockState() origin 0 change to 1
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogCommonBaseModel::setVREULockState(bool)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogCommonBaseModel::setVRDealingState(bool)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogCommonBaseModel::setVRDealingState(bool)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogCommonBaseModel::setVRToneDown(const bool&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::setVRToneDown() origin 0 change to 0
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::getVRToneDown() 0
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::getVRToneDown() 0
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::getVRToneDown() 0
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::getVRToneDown() 0
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::getVRToneDown() 0
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::getVRToneDown() 0
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual bool VoiceVoiceRecogCommonBaseModel::getVRToneDown()]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogCommonBaseModel::setVRToneDown(const bool&)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVRInfoBaseModel::onUpdateModelData() key = VRState
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVRInfoListModel::onUpdateModelData() key = VRState
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogNaviBaseModel::onUpdateModelData() key = VRState
+D/VoiceVoiceRecog( 1434): <  6bd> [VoiceVoiceRecog]  ->[virtual void VoiceMeterReplier::replyNotifyVRInfo(bool, uint64_t)]
+D/VoiceVoiceRecog( 1434): <  6bd> [VoiceVoiceRecog]  <-[virtual void VoiceMeterReplier::replyNotifyVRInfo(bool, uint64_t)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogNaviListModel::onUpdateModelData() key = VRState
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogPhoneListModel::onUpdateModelData() key = VRState
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogTestModel::onUpdateModelData(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogTestModel::onUpdateModelData(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVoiceTagBaseModel::onUpdateModelData(QString key, QVariant data)
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception !---tag [result] is not exist
+D/VoiceVoiceRecog( 1434): <  59a> Parse Exception!
+D/VoiceVoiceRecog( 1434): <  59a> current result is []
+D/VoiceVoiceRecog( 1434): <  59a> [VR_Performance] vr_status = quit, recog result =
+D/VoiceVoiceRecog( 1434): <  59a> modeupdata has finished!
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[void VoiceVoiceRecogImpl::notifyOnRequestResult(int32_t, const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceVoiceRecogImpl::notifyIsVoiceSettingAvailable(bool)]
+D/L15VR   ( 1434): VRCommon::onNotify()  >>>>>> fc://voice/voicerecog/notify/isvoicesettingavailable <<<<<<<<<
+D/L15VR   ( 1434): VRAppServiceNaviHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/isvoicesettingavailable
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/isvoicesettingavailable
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify uri is otherwise
+D/L15VR   ( 1434): VRAppServiceAudioHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/isvoicesettingavailable
+D/L15VR   ( 1434): VRAppServiceCommonHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/isvoicesettingavailable
+D/L15VR   ( 1434): VRAppServiceCliamteHandle::onVRFCNotify uri is fc://voice/voicerecog/notify/isvoicesettingavailable
+D/L15VR   ( 1434): VRAppServiceAppHandle::onVRNotify() uri is fc://voice/voicerecog/notify/isvoicesettingavailable
+D/L15VR   ( 1434): VRSelectHint::onNotify() fc://voice/voicerecog/notify/isvoicesettingavailable
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::checkTaskId() always true
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[void VoiceVoiceRecogImpl::notifyIsVoiceSettingAvailable(bool)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceVoiceRecogImpl::notifyVRServiceVoiceTagStatus(bool)]
+D/VoiceVoiceRecog( 1434): <  59a> Current voiceTagStatus is [0]
+D/L15VR   ( 1434): VRCommon::onNotify()  >>>>>> fc://voice/voicerecog/res/getvoicetagstatus <<<<<<<<<
+D/L15VR   ( 1434): VRAppServiceNaviHandle::onVRFCNotify uri is fc://voice/voicerecog/res/getvoicetagstatus
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify uri is fc://voice/voicerecog/res/getvoicetagstatus
+D/L15VR   ( 1434): VRAppServicePhoneHandle::onVRFCNotify uri is otherwise
+D/L15VR   ( 1434): VRAppServiceAudioHandle::onVRFCNotify uri is fc://voice/voicerecog/res/getvoicetagstatus
+D/L15VR   ( 1434): VRAppServiceCommonHandle::onVRFCNotify uri is fc://voice/voicerecog/res/getvoicetagstatus
+D/L15VR   ( 1434): VRAppServiceCliamteHandle::onVRFCNotify uri is fc://voice/voicerecog/res/getvoicetagstatus
+D/L15VR   ( 1434): VRAppServiceAppHandle::onVRNotify() uri is fc://voice/voicerecog/res/getvoicetagstatus
+D/L15VR   ( 1434): VRSelectHint::onNotify() fc://voice/voicerecog/res/getvoicetagstatus
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::checkTaskId() always true 对象
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[void VoiceVoiceRecogImpl::notifyVRServiceVoiceTagStatus(bool)]
+E/VoiceVoiceRecog( 1434): <  59a> Meter service accept the vrstate is [1]!
+D/L15VR   ( 1434): VRFCCommon::getFCPoint() type 0
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() fcPoint 0x1446620 bForce 1
+D/L15VR   ( 1434): VRAgentTable::visibleHasChanged()
+D/L15VR   ( 1434): VRAgentTable::refresh()
+D/L15VR   ( 1434): VRStateBar::visibleHasChanged() 0 point 14cf178
+D/L15VR   ( 1434): [VR_Performance] 215-8 215-9 [UI top hint hide]
+D/L15VR   ( 1434): onVRInterruptStatusChanged VRMode 32795 VRNaviMode 32796
+D/L15VR   ( 1434): onVRInterruptStatusChanged info hmiMode 32795  state 2
+D/L15VR   ( 1434): VRStartAdapter::instance() 0x14472e8
+D/L15VR   ( 1434): VRStartAdapter::instance() 0x14472e8
+D/L15VR   ( 1434): VRStartAdapter::onVRInterruptStatusChanged()
+D/L15VR   ( 1434): onVRMainScreenTypeChanged type 0, appid net.suntec.app.L1DHome.application
+D/L15VR   ( 1434): NativeApp_Home::onVRBackground() m_currentApp 1!!!!!
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRStartAdapter::instance() 0x14472e8
+D/L15VR   ( 1434): VRStartAdapter::instance() 0x14472e8
+D/L15VR   ( 1434): VRStartAdapter::onVRBackground()
+D/L15VR   ( 1434): VRStartAgent::onVRBackground()
+D/L15VR   ( 1434): VRStartAgent::stopEntry()!!!!!
+D/L15VR   ( 1434): VRStartAgent::disconnectSignals()
+D/L15VR   ( 1434): VRFCCommon::getFCPoint() type 0
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() fcPoint 0x1446620 bForce 1
+D/L15VR   ( 1434): VRFCCommon::getFCPoint() type 0
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() fcPoint 0x1446620 bForce 1
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::getNewUITaskIDForStart current ID is -----> 95
+D/L15VR   ( 1434): VRStartAgent::getNewTaskID current ID is -----> 95
+D/L15VR   ( 1434): VRCommon::instance() VRCommom is 14477b8
+D/L15VR   ( 1434): VRCommon::exitVR()
+D/L15VR   ( 1434): VRCommon::doRequest()  >>>>>>>>>>>>>>> fc://voice/voicerecog/req/exitrecog <<<<<<<<<<<
+D/L15VR   ( 1434): VRFCCommon::getFCPoint() type 0
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() fcPoint 0x1446620 bForce 0
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState()
+D/L15VR   ( 1434): VRFCCommon::getFCState()
+D/L15VR   ( 1434): VRFCCommon::getFCState() get state model
+D/L15VR   ( 1434): VRFCCommon::getFCState() state is 1
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() state is 1
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() state is connected
+D/L15VR   ( 1434): VRCommon::doRequest() FC Proxy is not NULL
+D/L15VR   ( 1434): VRFCCommon::getFCPoint() type 0
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() fcPoint 0x1446620 bForce 0
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState()
+D/L15VR   ( 1434): VRFCCommon::getFCState()
+D/L15VR   ( 1434): VRFCCommon::getFCState() get state model
+D/L15VR   ( 1434): VRFCCommon::getFCState() state is 1
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() state is 1
+D/L15VR   ( 1434): VRFCCommon::getFCPointByState() state is connected
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogFunctionControl::onRequest(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> uri = fc://voice/voicerecog/req/exitrecog
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[void VoiceVoiceRecogImpl::onRequestExitRecog(int32_t)]
+D/VoiceVoiceRecog( 1434): <  59a> taskID=[22]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVRInfoBaseModel::onUpdateModelData() key = TopHintsList
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVREUListModel::onUpdateModelData() key = TopHintsList
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogVRCommonListModel::onUpdateModelData(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogVRCommonListModel::upDataTopHintsList(QVariant&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VR_Performance] UI update top hints begin ...
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> hint is "Call John Smith"
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> hint is "Tune to 87.5 FM"
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> hint is "Play artist Lee Clark"
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> hint is "Dial 310 555 0137"
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> hint is "Redial"
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[VRCommonTopHintsListItem::VRCommonTopHintsListItem(const QString&)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogReplier::notifyRecognizeResult(int32_t, const string&)]
+D/VoiceVoiceRecog( 1434): <  6bf> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogReplier::notifyRecognizeResult(int32_t, const string&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VR_Performance] UI update top hints end ...
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogVRCommonListModel::upDataTopHintsList(QVariant&)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogVRCommonListModel::onUpdateModelData(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogAudioBaseModel::onUpdateModelData() key=[TopHintsList]
+D/VoiceVoiceRecog( 1434): <  59a>  VoiceVoiceRecogAudioListModel::onUpdateModelData(QString key, QVariant data)
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::onUpdateModelData() key = TopHintsList
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVRInfoBaseModel::onUpdateModelData() key = TopHintsList
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVRInfoListModel::onUpdateModelData() key = TopHintsList
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogNaviBaseModel::onUpdateModelData() key = TopHintsList
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogNaviListModel::onUpdateModelData() key = TopHintsList
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogPhoneListModel::onUpdateModelData() key = TopHintsList
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogTestModel::onUpdateModelData(QString, QVariant)]
+上海人民广场
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogTestModel::onUpdateModelData(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVoiceTagBaseModel::onUpdateModelData(QString key, QVariant data)
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVRInfoBaseModel::onUpdateModelData() key = vrAgent
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogVREUListModel::onUpdateModelData() key = vrAgent
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogVRCommonListModel::onUpdateModelData(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  <-[virtual void VoiceVoiceRecogVRCommonListModel::onUpdateModelData(QString, QVariant)]
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogAudioBaseModel::onUpdateModelData() key=[vrAgent]
+D/VoiceVoiceRecog( 1434): <  59a>  VoiceVoiceRecogAudioListModel::onUpdateModelData(QString key, QVariant data)
+D/VoiceVoiceRecog( 1434): <  59a> VoiceVoiceRecogCommonBaseModel::onUpdateModelData() key = vrAgent
+D/VoiceVoiceRecog( 1434): <  59a> [VoiceVoiceRecog]  ->[virtual void VoiceVoiceRecogCommonBaseModel::setAgent(const QString&)]
+D/VoiceVoiceRecog( 1434): <  59a> agent = topmenu

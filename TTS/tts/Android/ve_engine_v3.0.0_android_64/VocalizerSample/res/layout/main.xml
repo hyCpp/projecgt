@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:id="@+id/state"
+    android:padding="10dp"
+    android:gravity="center_horizontal|center_vertical"
+    />
+    
+<LinearLayout android:orientation="vertical"
+			  android:layout_width="fill_parent"
+			  android:layout_height="wrap_content">
+
+	<EditText android:id="@+id/textField"
+			  android:text="@string/demotext"
+			  android:gravity="top"
+			  android:layout_width="fill_parent"
+			  android:layout_height="70dip"
+			  android:layout_weight="1"
+			  android:selectAllOnFocus="true"
+			  android:inputType="text|textMultiLine"/>
+
+	<LinearLayout android:orientation="horizontal"
+				  android:layout_width="fill_parent"
+				  android:layout_height="wrap_content"
+				  android:layout_weight="1">
+	
+		<Button android:text="@string/initialize"
+				android:id="@+id/initializeButton"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"/>
+				
+		<Button android:text="@string/stop"
+				android:id="@+id/stopButton"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"/>
+				
+		<Button android:text="@string/speak"
+				android:id="@+id/speakButton"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"/>
+				
+		<Button android:text="@string/pause"
+				android:id="@+id/pauseButton"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"/>
+	</LinearLayout>
+				  
+</LinearLayout>
+
+<LinearLayout android:padding="10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_gravity="center">
+
+	<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="70dip" android:layout_weight="1">
+		<view
+			class="com.example.MouthView"
+			android:id="@+id/mouth"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"/>
+	</LinearLayout>
+
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="70dip" android:layout_weight="1">			
+		<view class="com.example.OsciView"
+		  android:id="@+id/oscilloscope"
+		  android:layout_width="fill_parent"
+		  android:layout_height="fill_parent"
+		  android:layout_weight="1"/>		  
+	</LinearLayout>	
+</LinearLayout>
+
+<!-- Speech control spinners -->
+
+<TextView android:text="@string/selectvoice_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+<Spinner android:id="@+id/voiceList" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+	
+<LinearLayout android:padding="10dp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_gravity="center">
+	
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1">		  
+		<TextView android:text="@string/volume_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+		<Spinner android:id="@+id/volumeList" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+	</LinearLayout>
+	
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1">		  
+		<TextView android:text="@string/rate_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+		<Spinner android:id="@+id/rateList" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+	</LinearLayout>		  
+	
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1">
+		<TextView android:text="@string/pitch_prompt" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+		<Spinner android:id="@+id/pitchList" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+	</LinearLayout>		  
+
+</LinearLayout>
+</LinearLayout>

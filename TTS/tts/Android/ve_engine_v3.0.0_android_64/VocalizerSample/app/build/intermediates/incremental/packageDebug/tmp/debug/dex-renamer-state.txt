@@ -1,0 +1,4 @@
+#Wed Oct 24 14:27:15 CST 2018
+base.0=/home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

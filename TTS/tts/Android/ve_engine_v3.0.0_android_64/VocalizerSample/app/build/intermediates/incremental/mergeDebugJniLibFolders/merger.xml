@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/jniLibs"><file name="arm64-v8a/libNuanceVocalizer.so" path="/home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/main/jniLibs/arm64-v8a/libNuanceVocalizer.so"/></source></dataSet><dataSet config="debug"><source path="/home/huyang/MyDemo/TTS/tts/Android/ve_engine_v3.0.0_android_64/VocalizerSample/app/src/debug/jniLibs"/></dataSet></merger>
